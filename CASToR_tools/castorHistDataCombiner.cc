@@ -151,6 +151,7 @@ void parseTerminalArguments(int narg, char* argv[]){
 	
 	string* names[3] = {&inName1, &inName2, &outName};
 	//cout << narg << endl;
+	//cout << argv[1] << endl;
 
 	string arg = argv[1];
 	if(arg == "-h" || arg == "--help"){
@@ -162,7 +163,7 @@ void parseTerminalArguments(int narg, char* argv[]){
 		}
 		
 		for(int i = 0; i < narg-2; i++){
-			*names[i-1] = argv[i+1];
+			*names[i] = argv[i+2];
 		}
 	}
 
